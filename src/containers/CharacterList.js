@@ -1,5 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { fetchCharacters } from '../actions';
 
-const CharacterList = () => (<div>Character List</div>);
+const CharacterList = ({ characters, fetchCharacters }) => {
+  useEffect(() => {
+    fetchCharacters();
+  }, []);
+  console.log(characters);
+  return (<div>Character List</div>);
+};
 
-export default CharacterList;
+CharacterList.propTypes = {
+  characters: PropTypes.instanceOf(Array).isRequired,
+  fetchCharacters: PropTypes.func.isRequired,
+};
+const mapStateToProps = state => ({ characters: state.characters });
+
+export default connect(mapStateToProps, { fetchCharacters })(CharacterList);
