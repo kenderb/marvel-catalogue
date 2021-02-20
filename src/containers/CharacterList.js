@@ -12,7 +12,7 @@ const CharacterList = ({ characters, fetchCharacters }) => {
   if (characters.length > 0) {
     return (
       <div>
-        {characters[0].map(character => (
+        {characters.map(character => (
           <CharacterCard
             name={character.name}
             thumbnail={character.thumbnail}

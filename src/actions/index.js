@@ -2,11 +2,12 @@ import developerMarvel, { QUERY } from '../apis/developerMarvel';
 
 export const FETCH_CHARACTERS = 'FETCH_CHARACTERS';
 
-export const fetchCharacters = () => async dispatch => {
+export const fetchCharacters = (character = '') => async dispatch => {
   try {
-    const response = await developerMarvel.get(`/characters?${QUERY}`, {
+    const response = await developerMarvel.get(`/characters?${character ? `name=${character}&` : ''}${QUERY}`, {
       orderBy: 'name',
     });
+    console.log('submit');
     dispatch({ type: FETCH_CHARACTERS, payload: response.data.data.results });
     return true;
   } catch (error) {

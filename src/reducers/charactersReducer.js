@@ -4,7 +4,7 @@ const charactersReducer = (state = [], action) => {
   switch (action.type) {
     case FETCH_CHARACTERS:
 
-      return [...state, action.payload];
+      return action.payload;
 
     default:
 
