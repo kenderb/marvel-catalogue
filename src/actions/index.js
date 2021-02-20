@@ -1,6 +1,7 @@
 import developerMarvel, { QUERY } from '../apis/developerMarvel';
 
 export const FETCH_COMICS = 'FETCH_COMICS';
+export const FILTER_COMICS = 'FILTER_COMICS';
 
 export const fetchComics = (title = 'iron man') => async dispatch => {
   try {
@@ -13,3 +14,8 @@ export const fetchComics = (title = 'iron man') => async dispatch => {
     return error.message;
   }
 };
+
+export const filterByCreator = filter => ({
+  type: FILTER_COMICS,
+  payload: filter,
+});
