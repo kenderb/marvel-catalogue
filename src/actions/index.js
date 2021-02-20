@@ -8,7 +8,8 @@ export const fetchCharacters = () => async dispatch => {
       orderBy: 'name',
     });
     dispatch({ type: FETCH_CHARACTERS, payload: response.data.data.results });
+    return true;
   } catch (error) {
-    console.dir(error.message);
+    return error.message;
   }
 };

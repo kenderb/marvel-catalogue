@@ -6,8 +6,8 @@ import { fetchCharacters } from '../actions';
 const CharacterList = ({ characters, fetchCharacters }) => {
   useEffect(() => {
     fetchCharacters();
-  }, []);
-  console.log(characters);
+  }, [fetchCharacters]);
+  console.log('from the CharacterLists', characters);
   return (<div>Character List</div>);
 };
 
