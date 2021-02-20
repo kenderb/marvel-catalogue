@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchCharacters } from '../actions';
+import { fetchComics } from '../actions';
 
-const CharacterForm = ({ fetchCharacters }) => {
+const ComicForm = ({ fetchComics }) => {
   const [inputValue, setInputValue] = useState('');
   const handleSumit = e => {
     e.preventDefault();
-    fetchCharacters(inputValue);
+    fetchComics(inputValue);
     e.target.reset();
   };
   const handleOnChnage = e => {
@@ -21,8 +21,8 @@ const CharacterForm = ({ fetchCharacters }) => {
   );
 };
 
-CharacterForm.propTypes = {
-  fetchCharacters: PropTypes.func.isRequired,
+ComicForm.propTypes = {
+  fetchComics: PropTypes.func.isRequired,
 };
 
-export default connect(null, { fetchCharacters })(CharacterForm);
+export default connect(null, { fetchComics })(ComicForm);

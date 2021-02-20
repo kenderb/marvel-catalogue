@@ -1,7 +1,7 @@
 import React from 'react';
 
-import CharacterForm from '../containers/CharacterForm';
-import CharacterList from '../containers/CharacterList';
+import CharacterForm from '../containers/ComicForm';
+import CharacterList from '../containers/ComicList';
 
 const App = () => (
   <div>

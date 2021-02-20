@@ -1,13 +1,13 @@
 import developerMarvel, { QUERY } from '../apis/developerMarvel';
 
-export const FETCH_CHARACTERS = 'FETCH_CHARACTERS';
+export const FETCH_COMICS = 'FETCH_COMICS';
 
-export const fetchCharacters = (character = '') => async dispatch => {
+export const fetchComics = (title = 'iron man') => async dispatch => {
   try {
-    const response = await developerMarvel.get(`/characters?${character ? `name=${character}&` : ''}limit=80&${QUERY}`, {
+    const response = await developerMarvel.get(`/comics?${title ? `title=${title}&` : ''}limit=80&${QUERY}`, {
       orderBy: 'modified',
     });
-    dispatch({ type: FETCH_CHARACTERS, payload: response.data.data.results });
+    dispatch({ type: FETCH_COMICS, payload: response.data.data.results });
     return true;
   } catch (error) {
     return error.message;
