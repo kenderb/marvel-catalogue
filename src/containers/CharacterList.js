@@ -2,13 +2,28 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchCharacters } from '../actions';
+import CharacterCard from '../components/CharacterCard';
 
 const CharacterList = ({ characters, fetchCharacters }) => {
   useEffect(() => {
     fetchCharacters();
   }, [fetchCharacters]);
   console.log('from the CharacterLists', characters);
-  return (<div>Character List</div>);
+  if (characters.length > 0) {
+    return (
+      <div>
+        {characters[0].map(character => (
+          <CharacterCard
+            name={character.name}
+            thumbnail={character.thumbnail}
+            description={character.description}
+            key={character.id}
+          />
+        ))}
+      </div>
+    );
+  }
+  return null;
 };
 
 CharacterList.propTypes = {
