@@ -1,5 +1,13 @@
 import React from 'react';
 
-const App = () => (<h1>App</h1>);
+import CharacterForm from '../containers/CharacterForm';
+import CharacterList from '../containers/CharacterList';
+
+const App = () => (
+  <div>
+    <CharacterForm />
+    <CharacterList />
+  </div>
+);
 
 export default App;
