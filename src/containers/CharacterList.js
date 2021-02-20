@@ -8,7 +8,9 @@ const CharacterList = ({ characters, fetchCharacters }) => {
   useEffect(() => {
     fetchCharacters();
   }, [fetchCharacters]);
+
   console.log('from the CharacterLists', characters);
+
   if (characters.length > 0) {
     return (
       <div>
@@ -23,10 +25,12 @@ const CharacterList = ({ characters, fetchCharacters }) => {
       </div>
     );
   }
+
   return null;
 };
 
 CharacterList.propTypes = {
+
   characters: PropTypes.instanceOf(Array).isRequired,
   fetchCharacters: PropTypes.func.isRequired,
 };
