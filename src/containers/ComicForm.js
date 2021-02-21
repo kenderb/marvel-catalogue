@@ -1,7 +1,8 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchComics, filterByCreator } from '../actions';
+import FilterComics from '../components/FilterComics';
 
 const listOfCreators = [
   'Federico Blee',
@@ -26,12 +27,10 @@ const listOfCreators = [
 
 const ComicForm = ({ fetchComics, filterByCreator }) => {
   const [inputValue, setInputValue] = useState('');
-  const selectRef = useRef(null);
 
   const handleSumit = e => {
     e.preventDefault();
     fetchComics(inputValue);
-    filterByCreator(selectRef.current.value);
   };
 
   const handleOnChnage = e => {
@@ -49,12 +48,10 @@ const ComicForm = ({ fetchComics, filterByCreator }) => {
 
       <button type="submit">Submit</button>
 
-      <select onChange={e => handleOnChnageSelect(e)} ref={selectRef}>
-
-        {['All', ...listOfCreators].map(creator => (
-          <option value={creator} key={creator}>{creator}</option>
-        ))}
-      </select>
+      <FilterComics
+        cretorList={listOfCreators}
+        onChangeSelect={handleOnChnageSelect}
+      />
 
     </form>
   );
