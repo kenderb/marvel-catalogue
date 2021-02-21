@@ -10,7 +10,6 @@ const ComicDetail = ({ details, match, fetchComicDetail }) => {
     fetchComicDetail(id);
   }, []);
 
-  console.log(details);
   if (details.id) {
     const {
       title, pageCount, thumbnail, description,
