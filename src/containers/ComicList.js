@@ -9,27 +9,27 @@ const CharacterList = ({ filter, comics, fetchComics }) => {
     fetchComics();
   }, [fetchComics]);
 
+  const displayComics = () => comics.map(comic => {
+    const arrayOfUsers = comic.creators.items.map(name => name.name);
+    if (arrayOfUsers.includes(filter) || filter === 'All') {
+      return (
+        <ComicCard
+          title={comic.title}
+          thumbnail={comic.thumbnail}
+          format={comic.format}
+          key={comic.id}
+          creators={comic.creators}
+        />
+      );
+    }
+    return null;
+  });
+
   if (comics.length > 0) {
     return (
       <div>
         {filter}
-        {
-          comics.map(comic => {
-            const arrayOfUsers = comic.creators.items.map(name => name.name);
-            if (arrayOfUsers.includes(filter) || filter === 'All') {
-              return (
-                <ComicCard
-                  title={comic.title}
-                  thumbnail={comic.thumbnail}
-                  format={comic.format}
-                  key={comic.id}
-                  creators={comic.creators}
-                />
-              );
-            }
-            return null;
-          })
-        }
+        {displayComics()}
       </div>
     );
   }
@@ -43,6 +43,7 @@ CharacterList.propTypes = {
   filter: PropTypes.string.isRequired,
 
 };
+
 const mapStateToProps = state => ({ comics: state.comics, filter: state.filter });
 
 export default connect(mapStateToProps, { fetchComics })(CharacterList);
