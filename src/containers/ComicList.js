@@ -25,7 +25,6 @@ const CharacterList = ({ filter, comics, fetchComics }) => {
     }
     return null;
   });
-  console.log(comics);
   if (comics.length > 0) {
     return (
       <div>
@@ -40,11 +39,9 @@ const CharacterList = ({ filter, comics, fetchComics }) => {
 };
 
 CharacterList.propTypes = {
-
   comics: PropTypes.instanceOf(Array).isRequired,
   fetchComics: PropTypes.func.isRequired,
   filter: PropTypes.string.isRequired,
-
 };
 
 const mapStateToProps = state => ({ comics: state.comics, filter: state.filter });
