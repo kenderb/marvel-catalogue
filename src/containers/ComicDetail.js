@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -11,9 +12,20 @@ const ComicDetail = ({ details, match, fetchComicDetail }) => {
 
   console.log(details);
   if (details.id) {
-    const { title, pageCount, thumbnail } = details;
+    const {
+      title, pageCount, thumbnail, description,
+      stories, characters,
+    } = details;
+
+    const createMarkup = () => (
+      { __html: description }
+    );
+
+    const { items } = stories;
+    const { items: characterList } = characters;
     const thumbnailSplit = thumbnail.path.split('//');
     thumbnailSplit[0] = 'https://';
+
     return (
       <div>
         <h1>
@@ -28,7 +40,24 @@ const ComicDetail = ({ details, match, fetchComicDetail }) => {
             {' '}
             { pageCount }
           </li>
-
+          <li>
+            <b>Description: </b>
+            <div dangerouslySetInnerHTML={createMarkup()} />
+          </li>
+          <li>
+            <b>
+              Characters:
+            </b>
+            {' '}
+            {characterList ? characterList.map(item => <p key={item.name}>{item.name}</p>) : ''}
+          </li>
+          <li>
+            <b>
+              Stories:
+            </b>
+            {' '}
+            {items ? items.map(item => <p key={item.name}>{item.name}</p>) : ''}
+          </li>
         </ul>
       </div>
     );
