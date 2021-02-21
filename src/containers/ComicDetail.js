@@ -8,7 +8,7 @@ const ComicDetail = ({ details, match, fetchComicDetail }) => {
   const { id } = match.params;
   useEffect(() => {
     fetchComicDetail(id);
-  }, []);
+  }, [fetchComicDetail]);
 
   if (details.id) {
     const {
