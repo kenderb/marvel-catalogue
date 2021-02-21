@@ -43,16 +43,12 @@ const ComicForm = ({ fetchComics, filterByCreator }) => {
 
   return (
     <form onSubmit={e => handleSumit(e)}>
-
       <input type="text" value={inputValue} onChange={e => handleOnChnage(e)} required />
-
       <button type="submit">Submit</button>
-
       <FilterComics
         cretorList={listOfCreators}
         onChangeSelect={handleOnChnageSelect}
       />
-
     </form>
   );
 };
