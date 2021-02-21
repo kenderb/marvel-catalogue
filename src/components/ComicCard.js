@@ -28,7 +28,7 @@ ComicCard.propTypes = {
   thumbnail: PropTypes.instanceOf(Object).isRequired,
   title: PropTypes.string.isRequired,
   creators: PropTypes.instanceOf(Object).isRequired,
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default ComicCard;
