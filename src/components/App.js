@@ -16,7 +16,6 @@ const App = () => (
           <CharacterList />
         </Route>
         <Route path="/comics/:id" component={ComicDetail} />
-
       </Switch>
     </div>
   </Router>
