@@ -19,12 +19,13 @@ const CharacterList = ({ filter, comics, fetchComics }) => {
           format={comic.format}
           key={comic.id}
           creators={comic.creators}
+          id={comic.id}
         />
       );
     }
     return null;
   });
-
+  console.log(comics);
   if (comics.length > 0) {
     return (
       <div>
@@ -33,7 +34,9 @@ const CharacterList = ({ filter, comics, fetchComics }) => {
       </div>
     );
   }
-  return <div>Loading...</div>;
+  return (
+    <h1>loading...</h1>
+  );
 };
 
 CharacterList.propTypes = {

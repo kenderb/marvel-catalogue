@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-const ComicCard = ({ title, thumbnail, creators }) => {
+const ComicCard = ({
+  title, thumbnail, creators, id,
+}) => {
   const thumbnailSplit = thumbnail.path.split('//');
   thumbnailSplit[0] = 'https://';
 
@@ -16,6 +19,7 @@ const ComicCard = ({ title, thumbnail, creators }) => {
       <ul>
         { creators.available > 0 ? displayCreatorsName() : '' }
       </ul>
+      <Link to={`/comics/${id}`}> See more </Link>
     </div>
   );
 };
@@ -24,6 +28,7 @@ ComicCard.propTypes = {
   thumbnail: PropTypes.instanceOf(Object).isRequired,
   title: PropTypes.string.isRequired,
   creators: PropTypes.instanceOf(Object).isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default ComicCard;
