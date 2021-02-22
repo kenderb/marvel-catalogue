@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchComics, filterByCreator } from '../actions';
@@ -7,8 +7,10 @@ import HeroSelector from '../components/HeroSelector';
 import { listOfCreators, characters } from '../common';
 
 const ComicForm = ({ fetchComics, filterByCreator }) => {
+  const [currentSelect, setCurrentSelect] = useState('iron man');
   const handleOnChnage = name => {
     fetchComics(name);
+    setCurrentSelect(name);
   };
 
   const handleOnChnageSelect = e => {
@@ -23,6 +25,7 @@ const ComicForm = ({ fetchComics, filterByCreator }) => {
           onClickHandler={handleOnChnage}
           image={character.image}
           heroName={character.name}
+          selected={currentSelect}
         />
       ))}
       <FilterComics
