@@ -28,21 +28,22 @@ export const RigthNavWrapper = styled.li`
 
 export const HeroButton = styled.button`
   border: solid 1px var(--primary-color);
-  margin: 0.5em;
-  width: 10em;
+  margin: 0.1em;
+  width: 8em;
   border-radius: 1em;
-  padding: 1em;
+  padding: 0.5em;
 `;
 
 export const HeroWrapper = styled.div`
   background-color: var(--primary-color);
-  position:fixed;
- 
+  position: sticky;
+  top: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 `;
 
 export const MainWrapper = styled.main`
-  display: flex
+  display: flex;
+  
 `;

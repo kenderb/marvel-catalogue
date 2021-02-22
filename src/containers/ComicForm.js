@@ -2,20 +2,16 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchComics, filterByCreator } from '../actions';
-import FilterComics from '../components/FilterComics';
+
 import HeroSelector from '../components/HeroSelector';
-import { listOfCreators, characters } from '../common';
+import { characters } from '../common';
 import { HeroWrapper } from '../components/styled/lib';
 
-const ComicForm = ({ fetchComics, filterByCreator }) => {
+const ComicForm = ({ fetchComics }) => {
   const [currentSelect, setCurrentSelect] = useState('iron man');
   const handleOnChnage = name => {
     fetchComics(name);
     setCurrentSelect(name);
-  };
-
-  const handleOnChnageSelect = e => {
-    filterByCreator(e.target.value);
   };
 
   return (
@@ -31,17 +27,13 @@ const ComicForm = ({ fetchComics, filterByCreator }) => {
           />
         ))}
       </HeroWrapper>
-      <FilterComics
-        cretorList={listOfCreators}
-        onChangeSelect={handleOnChnageSelect}
-      />
     </>
   );
 };
 
 ComicForm.propTypes = {
   fetchComics: PropTypes.func.isRequired,
-  filterByCreator: PropTypes.func.isRequired,
+
 };
 
 export default connect(null, { fetchComics, filterByCreator })(ComicForm);
