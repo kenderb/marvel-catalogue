@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchComics, filterByCreator } from '../actions';
 import ComicCard from '../components/ComicCard';
+import Loading from '../components/Loading';
+import Error from '../components/Error';
 
 const CharacterList = ({
   filter, comics, fetchComics, filterByCreator,
@@ -31,9 +33,9 @@ const CharacterList = ({
   });
 
   if (!loading) return displayComics();
-  if (error) return <h1>ERROR</h1>;
+  if (error) return <Error />;
   return (
-    <h1>loading...</h1>
+    <Loading />
   );
 };
 
