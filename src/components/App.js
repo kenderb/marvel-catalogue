@@ -8,16 +8,14 @@ import CharacterList from '../containers/ComicList';
 
 const App = () => (
   <Router>
-    <div>
-      <NavBar />
-      <Switch>
-        <Route path="/" exact>
-          <CharacterForm />
-          <CharacterList />
-        </Route>
-        <Route path="/comics/:id" component={ComicDetail} />
-      </Switch>
-    </div>
+    <NavBar />
+    <Switch>
+      <Route path="/" exact>
+        <CharacterForm />
+        <CharacterList />
+      </Route>
+      <Route path="/comics/:id" component={ComicDetail} />
+    </Switch>
   </Router>
 );
 
