@@ -32,11 +32,9 @@ const CharacterList = ({
     return null;
   });
 
-  if (!loading) return displayComics();
+  if (loading) return <Loading />;
   if (error) return <Error />;
-  return (
-    <Loading />
-  );
+  return displayComics();
 };
 
 CharacterList.propTypes = {
