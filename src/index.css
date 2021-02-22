@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  box-sizing: border-box;
+  --gray-color: #e4e4e4;
+  --gray-two: #42424210;
+  --black-one: #131313;
+  --primary-color: #ed1d24;
+  --secondary-color: #f7ba43;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+img {
+  width: 100%;
+}
