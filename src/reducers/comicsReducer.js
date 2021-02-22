@@ -1,4 +1,4 @@
-import { FETCH_COMICS, LOADING_COMICS, ERROR_COMICS } from '../actions';
+import { FETCH_COMICS, LOADING_COMICS, ERROR_COMICS } from '../actions/constans';
 
 const initialState = {
   data: [],

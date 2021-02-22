@@ -1,4 +1,4 @@
-import { FILTER_COMICS } from '../actions';
+import { FILTER_COMICS } from '../actions/constans';
 
 const filterReducer = (state = 'All', action) => {
   switch (action.type) {

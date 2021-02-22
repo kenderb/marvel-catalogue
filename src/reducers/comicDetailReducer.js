@@ -1,4 +1,4 @@
-import { FETCH_COMIC_DETAIL } from '../actions';
+import { FETCH_COMIC_DETAIL } from '../actions/constans';
 
 const detailReducer = (state = [], action) => {
   switch (action.type) {
