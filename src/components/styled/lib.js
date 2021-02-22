@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Header = styled.nav`
+  z-index: 1;
   position: sticky;
   top: 0; 
 `;
@@ -28,10 +29,14 @@ export const RigthNavWrapper = styled.li`
 
 export const HeroButton = styled.button`
   border: solid 1px var(--primary-color);
-  margin: 0.1em;
+  margin: 0.5em;
   width: 7.5em;
+  padding: 0.3rem;
   border-radius: 1em;
-  padding: 0.5em;
+  box-shadow: 10px 10px 29px -19px rgba(0,0,0,0.75);
+  img {
+    border-radius: 0.5em;
+  }
 `;
 
 export const MainWrapper = styled.main`
@@ -48,12 +53,20 @@ export const HeroWrapper = styled.div`
   background-color: var(--primary-color);
   position: sticky;
   top: 58px;
+  width: auto;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: start;
+  
 `;
 
 export const FilterSelect = styled.select`
   position: sticky;
   top: 58px;
+`;
+
+export const CharacterListWrapper = styled.div`
+  grid-area: comicList;
 `;

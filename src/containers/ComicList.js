@@ -5,6 +5,7 @@ import { fetchComics, filterByCreator } from '../actions';
 import ComicCard from '../components/ComicCard';
 import Loading from '../components/Loading';
 import Error from '../components/Error';
+import { CharacterListWrapper } from '../components/styled/lib';
 
 const CharacterList = ({
   filter, comics, fetchComics, filterByCreator,
@@ -19,7 +20,7 @@ const CharacterList = ({
     const arrayOfUsers = comic.creators.items.map(name => name.name);
     if (arrayOfUsers.includes(filter) || filter === 'All') {
       return (
-        <div>
+        <CharacterListWrapper>
           <ComicCard
             title={comic.title}
             thumbnail={comic.thumbnail}
@@ -28,7 +29,7 @@ const CharacterList = ({
             creators={comic.creators}
             id={comic.id}
           />
-        </div>
+        </CharacterListWrapper>
       );
     }
     return null;
