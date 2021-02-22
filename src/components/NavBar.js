@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import navIcon from '../assets/images/MarvelLogo.svg';
-import { NavBar } from './styled/lib';
+import { Header, NavUl, RigthNavWrapper } from './styled/lib';
 
 const FilterComics = () => (
-  <header>
-    <NavBar>
-      <ul>
+  <Header>
+    <nav>
+      <NavUl>
         <li>
           <Link to="/">
             {' '}
@@ -14,12 +14,12 @@ const FilterComics = () => (
             {' '}
           </Link>
         </li>
-        <li>
+        <RigthNavWrapper>
           <Link to="/"> List </Link>
-        </li>
-      </ul>
-    </NavBar>
-  </header>
+        </RigthNavWrapper>
+      </NavUl>
+    </nav>
+  </Header>
 );
 
 export default FilterComics;
