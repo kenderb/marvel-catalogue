@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar renders correctly 1`] = `
+<header>
+  <nav>
+    <ul>
+      <li>
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+           LOGO 
+        </a>
+      </li>
+      <li>
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+           List 
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+`;

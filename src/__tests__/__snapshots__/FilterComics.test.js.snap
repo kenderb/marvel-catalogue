@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterComics renders correctly 1`] = `
+<select
+  onChange={[Function]}
+>
+  <option
+    value="All"
+  >
+    All
+  </option>
+</select>
+`;

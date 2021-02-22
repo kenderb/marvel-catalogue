@@ -10,8 +10,13 @@ const FilterComics = ({ cretorList, onChangeSelect }) => (
 );
 
 FilterComics.propTypes = {
-  cretorList: PropTypes.instanceOf(Array).isRequired,
-  onChangeSelect: PropTypes.func.isRequired,
+  cretorList: PropTypes.instanceOf(Array),
+  onChangeSelect: PropTypes.func,
+};
+
+FilterComics.defaultProps = {
+  cretorList: [],
+  onChangeSelect: () => (''),
 };
 
 export default FilterComics;

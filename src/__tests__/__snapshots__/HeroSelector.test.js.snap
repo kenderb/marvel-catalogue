@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeroSelector renders correctly 1`] = `
+<button
+  onClick={[Function]}
+  style={
+    Object {
+      "backgroundColor": "red",
+    }
+  }
+  type="button"
+>
+  <img
+    alt=""
+    src=""
+  />
+</button>
+`;

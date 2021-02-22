@@ -14,10 +14,17 @@ const HeroSelector = ({
 );
 
 HeroSelector.propTypes = {
-  image: PropTypes.string.isRequired,
-  heroName: PropTypes.string.isRequired,
-  selected: PropTypes.string.isRequired,
-  onClickHandler: PropTypes.func.isRequired,
+  image: PropTypes.string,
+  heroName: PropTypes.string,
+  selected: PropTypes.string,
+  onClickHandler: PropTypes.func,
+};
+
+HeroSelector.defaultProps = {
+  image: '',
+  heroName: '',
+  selected: '',
+  onClickHandler: () => (''),
 };
 
 export default HeroSelector;
