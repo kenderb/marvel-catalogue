@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { HeroButton } from './styled/lib';
 
 const HeroSelector = ({
   image, heroName, onClickHandler, selected,
 }) => (
-  <button
+  <HeroButton
     type="button"
     onClick={() => onClickHandler(heroName)}
-    style={{ backgroundColor: selected === heroName ? 'red' : 'transparent' }}
+    style={{ backgroundColor: selected === heroName ? '#f7ba43' : 'white' }}
   >
     <img src={image} alt={heroName} />
-  </button>
+  </HeroButton>
 );
 
 HeroSelector.propTypes = {

@@ -5,6 +5,7 @@ import { fetchComics, filterByCreator } from '../actions';
 import FilterComics from '../components/FilterComics';
 import HeroSelector from '../components/HeroSelector';
 import { listOfCreators, characters } from '../common';
+import { HeroWrapper } from '../components/styled/lib';
 
 const ComicForm = ({ fetchComics, filterByCreator }) => {
   const [currentSelect, setCurrentSelect] = useState('iron man');
@@ -19,15 +20,17 @@ const ComicForm = ({ fetchComics, filterByCreator }) => {
 
   return (
     <>
-      {characters.map(character => (
-        <HeroSelector
-          key={character.id}
-          onClickHandler={handleOnChnage}
-          image={character.image}
-          heroName={character.name}
-          selected={currentSelect}
-        />
-      ))}
+      <HeroWrapper>
+        {characters.map(character => (
+          <HeroSelector
+            key={character.id}
+            onClickHandler={handleOnChnage}
+            image={character.image}
+            heroName={character.name}
+            selected={currentSelect}
+          />
+        ))}
+      </HeroWrapper>
       <FilterComics
         cretorList={listOfCreators}
         onChangeSelect={handleOnChnageSelect}

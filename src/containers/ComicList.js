@@ -34,7 +34,7 @@ const CharacterList = ({
 
   if (loading) return <Loading />;
   if (error) return <Error />;
-  return displayComics();
+  return <div>{displayComics()}</div>;
 };
 
 CharacterList.propTypes = {
