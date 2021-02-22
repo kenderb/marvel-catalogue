@@ -1,12 +1,15 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchComics } from '../actions';
+import { fetchComics, filterByCreator } from '../actions';
 import ComicCard from '../components/ComicCard';
 
-const CharacterList = ({ filter, comics, fetchComics }) => {
+const CharacterList = ({
+  filter, comics, fetchComics, filterByCreator,
+}) => {
   useEffect(() => {
     fetchComics();
+    filterByCreator('All');
   }, [fetchComics]);
 
   const displayComics = () => comics.map(comic => {
@@ -41,9 +44,10 @@ const CharacterList = ({ filter, comics, fetchComics }) => {
 CharacterList.propTypes = {
   comics: PropTypes.instanceOf(Array).isRequired,
   fetchComics: PropTypes.func.isRequired,
+  filterByCreator: PropTypes.func.isRequired,
   filter: PropTypes.string.isRequired,
 };
 
 const mapStateToProps = state => ({ comics: state.comics, filter: state.filter });
 
-export default connect(mapStateToProps, { fetchComics })(CharacterList);
+export default connect(mapStateToProps, { fetchComics, filterByCreator })(CharacterList);
