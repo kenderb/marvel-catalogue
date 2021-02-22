@@ -1,40 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchComics, filterByCreator } from '../actions';
 import FilterComics from '../components/FilterComics';
-
-const listOfCreators = [
-  'Federico Blee',
-  'Sebastian Carrillo',
-  'John Tyler Christopher',
-  'Christina Harrington',
-  'Vc Cory Petit',
-  'Mariko Tamaki',
-  'Tom Brevoort',
-  'C Cafu',
-  'Christopher Cantwell',
-  'Vc Joe Caramagna',
-  "Frank D'ARMATA",
-  'Alex Ross',
-  'Henry Abrams',
-  'J.J Abrams',
-  'Olivier Coipel',
-  'Nick Lowe',
-  'Sara Pichelli',
-  'Dave Stewart',
-];
+import HeroSelector from '../components/HeroSelector';
+import { listOfCreators, characters } from '../common';
 
 const ComicForm = ({ fetchComics, filterByCreator }) => {
-  const [inputValue, setInputValue] = useState('');
-
-  const handleSumit = e => {
-    e.preventDefault();
-    fetchComics(inputValue);
-  };
-
-  const handleOnChnage = e => {
-    setInputValue(e.target.value);
+  const handleOnChnage = name => {
+    fetchComics(name);
   };
 
   const handleOnChnageSelect = e => {
@@ -42,14 +16,20 @@ const ComicForm = ({ fetchComics, filterByCreator }) => {
   };
 
   return (
-    <form onSubmit={e => handleSumit(e)}>
-      <input type="text" value={inputValue} onChange={e => handleOnChnage(e)} required />
-      <button type="submit">Submit</button>
+    <>
+      {characters.map(character => (
+        <HeroSelector
+          key={character.id}
+          onClickHandler={handleOnChnage}
+          image={character.image}
+          heroName={character.name}
+        />
+      ))}
       <FilterComics
         cretorList={listOfCreators}
         onChangeSelect={handleOnChnageSelect}
       />
-    </form>
+    </>
   );
 };
 
