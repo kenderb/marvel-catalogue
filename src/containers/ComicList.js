@@ -6,12 +6,14 @@ import ComicCard from '../components/ComicCard';
 
 const CharacterList = ({
   filter, comics, fetchComics, filterByCreator,
+  loading, error,
 }) => {
   useEffect(() => {
     fetchComics();
     filterByCreator('All');
   }, [fetchComics]);
-
+  console.log('loading ?', loading);
+  console.log('Error ?', error);
   const displayComics = () => comics.map(comic => {
     const arrayOfUsers = comic.creators.items.map(name => name.name);
     if (arrayOfUsers.includes(filter) || filter === 'All') {
@@ -28,6 +30,7 @@ const CharacterList = ({
     }
     return null;
   });
+
   if (comics.length > 0) {
     return (
       <div>
@@ -42,12 +45,19 @@ const CharacterList = ({
 };
 
 CharacterList.propTypes = {
-  comics: PropTypes.instanceOf(Array).isRequired,
+  comics: PropTypes.instanceOf(Object).isRequired,
   fetchComics: PropTypes.func.isRequired,
   filterByCreator: PropTypes.func.isRequired,
   filter: PropTypes.string.isRequired,
+  loading: PropTypes.bool.isRequired,
+  error: PropTypes.bool.isRequired,
 };
 
-const mapStateToProps = state => ({ comics: state.comics, filter: state.filter });
+const mapStateToProps = state => ({
+  loading: state.comics.loading,
+  comics: state.comics.data,
+  error: state.comics.error,
+  filter: state.filter,
+});
 
 export default connect(mapStateToProps, { fetchComics, filterByCreator })(CharacterList);
