@@ -12,8 +12,7 @@ const CharacterList = ({
     fetchComics();
     filterByCreator('All');
   }, [fetchComics]);
-  console.log('loading ?', loading);
-  console.log('Error ?', error);
+
   const displayComics = () => comics.map(comic => {
     const arrayOfUsers = comic.creators.items.map(name => name.name);
     if (arrayOfUsers.includes(filter) || filter === 'All') {
@@ -31,14 +30,8 @@ const CharacterList = ({
     return null;
   });
 
-  if (comics.length > 0) {
-    return (
-      <div>
-        {filter}
-        {displayComics()}
-      </div>
-    );
-  }
+  if (!loading) return displayComics();
+  if (error) return <h1>ERROR</h1>;
   return (
     <h1>loading...</h1>
   );

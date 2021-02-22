@@ -16,7 +16,7 @@ export const fetchComics = (title = 'iron man') => async dispatch => {
     return true;
   } catch (error) {
     dispatch({ type: ERROR_COMICS });
-    return error.message;
+    return false;
   }
 };
 
