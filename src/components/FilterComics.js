@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FilterSelect } from './styled/lib';
 
 const FilterComics = ({ cretorList, onChangeSelect }) => (
-  <select onChange={e => onChangeSelect(e)}>
+  <FilterSelect onChange={e => onChangeSelect(e)}>
     {['All', ...cretorList].map(creator => (
       <option value={creator} key={creator}>{creator}</option>
     ))}
-  </select>
+  </FilterSelect>
 );
 
 FilterComics.propTypes = {

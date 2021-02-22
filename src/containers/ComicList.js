@@ -5,8 +5,6 @@ import { fetchComics, filterByCreator } from '../actions';
 import ComicCard from '../components/ComicCard';
 import Loading from '../components/Loading';
 import Error from '../components/Error';
-import { listOfCreators } from '../common';
-import FilterComics from '../components/FilterComics';
 
 const CharacterList = ({
   filter, comics, fetchComics, filterByCreator,
@@ -16,19 +14,12 @@ const CharacterList = ({
     fetchComics();
     filterByCreator('All');
   }, [fetchComics]);
-  const handleOnChnageSelect = e => {
-    filterByCreator(e.target.value);
-  };
 
   const displayComics = () => comics.map(comic => {
     const arrayOfUsers = comic.creators.items.map(name => name.name);
     if (arrayOfUsers.includes(filter) || filter === 'All') {
       return (
         <div>
-          <FilterComics
-            cretorList={listOfCreators}
-            onChangeSelect={handleOnChnageSelect}
-          />
           <ComicCard
             title={comic.title}
             thumbnail={comic.thumbnail}
