@@ -1,4 +1,4 @@
-# TO-DO list using javaScript
+# Marvel Cataloge SPA
 
 > This project is a single page application built with React and Redux, All data that was retrieved from the Marvel developers 
 > API and is stored in the Redux store, also you can filter by creators to see the comics that the creator selected worked in.
