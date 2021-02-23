@@ -64,6 +64,22 @@ export const HeroWrapper = styled.div`
 
 export const CharacterListWrapper = styled.div`
   grid-area: comicList;
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    div {
+      border-radius: 1em;
+      margin: 0.7em;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    div {
+      border-radius: 1em;
+      margin: 0.7em;
+    }
+  }
 `;
 
 export const ComicCardWrapper = styled.div`
@@ -103,13 +119,15 @@ export const ComicCardWrapper = styled.div`
 `;
 
 export const FilterWrapper = styled.div`
+  height: 4em;
   background-color: white;
-  margin-top: 1em;
+  margin-bottom: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   b {
     margin-right: 1em;
+    font-size: 1.2em;
   }
 `;
 

@@ -20,16 +20,14 @@ const CharacterList = ({
     const arrayOfUsers = comic.creators.items.map(name => name.name);
     if (arrayOfUsers.includes(filter) || filter === 'All') {
       return (
-        <CharacterListWrapper>
-          <ComicCard
-            title={comic.title}
-            thumbnail={comic.thumbnail}
-            format={comic.format}
-            key={comic.id}
-            creators={comic.creators}
-            id={comic.id}
-          />
-        </CharacterListWrapper>
+        <ComicCard
+          title={comic.title}
+          thumbnail={comic.thumbnail}
+          format={comic.format}
+          key={comic.id}
+          creators={comic.creators}
+          id={comic.id}
+        />
       );
     }
     return null;
@@ -37,7 +35,7 @@ const CharacterList = ({
 
   if (loading) return <Loading />;
   if (error) return <Error />;
-  return <div>{displayComics()}</div>;
+  return <CharacterListWrapper>{displayComics()}</CharacterListWrapper>;
 };
 
 CharacterList.propTypes = {
