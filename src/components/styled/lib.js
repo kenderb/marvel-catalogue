@@ -37,15 +37,21 @@ export const HeroButton = styled.button`
   img {
     border-radius: 0.5em;
   }
+  @media screen and (min-width: 1024px) {
+    width: 7em;
+  }
 `;
 
 export const MainWrapper = styled.main`
   display: grid;
   grid-template-columns: 5em 1fr;
-  grid-template-rows: 40px  1fr 1fr;
+  grid-template-rows: 60px  1fr 1fr;
   grid-template-areas:
   "sideBar filterInput"
   "sideBar comicList";
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: 7.5em 1fr;
+  }
 `;
 
 export const HeroWrapper = styled.div`
@@ -59,10 +65,14 @@ export const HeroWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: start;
+  @media screen and (min-width: 1024px) {
+    width: 7em;
+  }
   
 `;
 
 export const CharacterListWrapper = styled.div`
+margin: auto;
   grid-area: comicList;
   @media screen and (min-width: 768px) {
     display: grid;
@@ -72,13 +82,9 @@ export const CharacterListWrapper = styled.div`
       margin: 0.7em;
     }
   }
-  @media screen and (min-width: 768px) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    div {
-      border-radius: 1em;
-      margin: 0.7em;
-    }
+  @media screen and (min-width: 1024px) {
+    max-width: 1300px;
+    grid-template-columns: repeat(3, 1fr);
   }
 `;
 
@@ -120,14 +126,13 @@ export const ComicCardWrapper = styled.div`
 
 export const FilterWrapper = styled.div`
   height: 4em;
-  background-color: white;
   margin-bottom: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   b {
     margin-right: 1em;
-    font-size: 1.2em;
+    font-size: 1em;
   }
 `;
 
@@ -137,7 +142,10 @@ export const FilterSelect = styled.select`
   position: sticky;
   top: 58px;
   padding: 0.5em;
-  font-size: 1em;
+  font-size: 0.7em;
+  @media screen and (min-width: 768px) {
+    font-size: 1em;
+  }
 `;
 
 export const DetailWrapper = styled.div`
