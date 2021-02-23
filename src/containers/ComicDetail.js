@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchComicDetail } from '../actions';
+import { DetailWrapper } from '../components/styled/lib';
 
 const ComicDetail = ({ details, match, fetchComicDetail }) => {
   const { id } = match.params;
@@ -26,7 +27,7 @@ const ComicDetail = ({ details, match, fetchComicDetail }) => {
     thumbnailSplit[0] = 'https://';
 
     return (
-      <div>
+      <DetailWrapper>
         <h1>
           { title }
         </h1>
@@ -58,7 +59,7 @@ const ComicDetail = ({ details, match, fetchComicDetail }) => {
             {items ? items.map(item => <p key={item.name}>{item.name}</p>) : ''}
           </li>
         </ul>
-      </div>
+      </DetailWrapper>
     );
   }
   return <div>Loading..</div>;

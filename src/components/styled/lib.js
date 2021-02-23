@@ -62,11 +62,6 @@ export const HeroWrapper = styled.div`
   
 `;
 
-export const FilterSelect = styled.select`
-  position: sticky;
-  top: 58px;
-`;
-
 export const CharacterListWrapper = styled.div`
   grid-area: comicList;
 `;
@@ -104,5 +99,46 @@ export const ComicCardWrapper = styled.div`
     text-align: center;
     text-decoration: none;
     border-radius: 0.3em;
+  }
+`;
+
+export const FilterWrapper = styled.div`
+  background-color: white;
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  b {
+    margin-right: 1em;
+  }
+`;
+
+export const FilterSelect = styled.select`
+  border-radius: 0.5em;
+  border: solid var(--secondary-color) 3px;
+  position: sticky;
+  top: 58px;
+  padding: 0.5em;
+  font-size: 1em;
+`;
+
+export const DetailWrapper = styled.div`
+  background-color: var(--gray-color);
+  padding: 1em;
+  border-radius: 1em;
+  margin: 0.5em;
+  h1 {
+    padding: 0 0.5em 0 0.5em;
+    font-size: 1.5em;
+  }
+  img {
+    border-radius: 1em;
+    box-shadow: 10px 10px 29px -19px rgba(0,0,0,0.75);
+  }
+  ul {
+    list-style: none;
+    li {
+      padding: 0.5em;
+    }
   }
 `;
