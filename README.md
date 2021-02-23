@@ -12,8 +12,8 @@
 
 ## Demo Screenshots
 
-![screenshot](Capture_01.jpg)
-![screenshot](Capture_02.jpg)
+![screenshot](Capture_01.JPG)
+![screenshot](Capture_02.JPG)
 
 ## Live Demo
 
