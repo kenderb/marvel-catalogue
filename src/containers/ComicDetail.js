@@ -28,15 +28,15 @@ const ComicDetail = ({ details, match, fetchComicDetail }) => {
 
     return (
       <DetailWrapper>
-        <h1>
-          { title }
-        </h1>
+        <div>
+          <h1>
+            { title }
+          </h1>
+          <img src={`${thumbnailSplit.join('')}.${thumbnail.extension}`} alt="" srcSet="" />
+        </div>
         <ul>
           <li>
-            <img src={`${thumbnailSplit.join('')}.${thumbnail.extension}`} alt="" srcSet="" />
-          </li>
-          <li>
-            Number of pages:
+            <b>Number of pages: </b>
             {' '}
             { pageCount }
           </li>

@@ -2,10 +2,11 @@
 
 exports[`HeroSelector renders correctly 1`] = `
 <button
+  className="sc-hKgILt xorqq"
   onClick={[Function]}
   style={
     Object {
-      "backgroundColor": "red",
+      "backgroundColor": "#f7ba43",
     }
   }
   type="button"

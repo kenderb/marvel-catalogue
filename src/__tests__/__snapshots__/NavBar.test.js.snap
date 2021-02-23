@@ -1,18 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NavBar renders correctly 1`] = `
-<header>
+<nav
+  className="sc-bdfBwQ fOzUnA"
+>
   <nav>
-    <ul>
+    <ul
+      className="sc-gsTCUz caxSvr"
+    >
       <li>
         <a
           href="/"
           onClick={[Function]}
         >
-           LOGO 
+           
+          <img
+            alt="nav logo"
+            src="MarvelLogo.svg"
+          />
+           
         </a>
       </li>
-      <li>
+      <li
+        className="sc-dlfnbm kwbObp"
+      >
         <a
           href="/"
           onClick={[Function]}
@@ -22,5 +33,5 @@ exports[`NavBar renders correctly 1`] = `
       </li>
     </ul>
   </nav>
-</header>
+</nav>
 `;

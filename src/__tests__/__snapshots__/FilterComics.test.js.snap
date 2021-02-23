@@ -1,13 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FilterComics renders correctly 1`] = `
-<select
-  onChange={[Function]}
+<div
+  className="sc-fubCfw kleonc"
 >
-  <option
-    value="All"
+  <b>
+    Filter by creator: 
+  </b>
+   
+  <select
+    className="sc-pFZIQ jEJBT"
+    onChange={[Function]}
   >
-    All
-  </option>
-</select>
+    <option
+      value="All"
+    >
+      All
+    </option>
+  </select>
+</div>
 `;

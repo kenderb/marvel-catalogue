@@ -149,13 +149,16 @@ export const FilterSelect = styled.select`
 `;
 
 export const DetailWrapper = styled.div`
+  max-width: 650px;
   background-color: var(--gray-color);
   padding: 1em;
   border-radius: 1em;
-  margin: 0.5em;
+  margin: auto;
+  margin-top: 0.5em;
   h1 {
     padding: 0 0.5em 0 0.5em;
     font-size: 1.5em;
+    margin-bottom: 0.5em;
   }
   img {
     border-radius: 1em;
@@ -165,6 +168,16 @@ export const DetailWrapper = styled.div`
     list-style: none;
     li {
       padding: 0.5em;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display:flex;
+    div {
+      text-align: center;
+    }
+    ul {
+      margin-top: 2em;
+      margin-left: 1em;
     }
   }
 `;
