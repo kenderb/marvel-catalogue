@@ -17,7 +17,7 @@
 
 ## Live Demo
 
-[Live version](https://eloquent-mcnulty-f14c04.netlify.app/)
+[Live version](https://gifted-jepsen-c27fe9.netlify.app/)
 
 ## Prerequisites
 
