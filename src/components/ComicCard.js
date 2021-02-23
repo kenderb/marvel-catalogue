@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { ComicCardWrapper } from './styled/lib';
 
 const ComicCard = ({
   title, thumbnail, creators, id,
@@ -9,18 +10,23 @@ const ComicCard = ({
   thumbnailSplit[0] = 'https://';
 
   const displayCreatorsName = () => (
-    creators.items.map(creator => <li key={creator.name}>{creator.name}</li>)
-  );
+    creators.items.map(creator => (
+      <span key={creator.name}>
+        {creator.name}
+        ,
+        {' '}
+      </span>
+    )));
 
   return (
-    <div>
-      <h1>{title}</h1>
+    <ComicCardWrapper>
+      <h2>{title}</h2>
       <img src={`${thumbnailSplit.join('')}.${thumbnail.extension}`} alt="" srcSet="" />
-      <ul>
+      <div>
         { creators.available > 0 ? displayCreatorsName() : '' }
-      </ul>
+      </div>
       <Link to={`/comics/${id}`}> See more </Link>
-    </div>
+    </ComicCardWrapper>
   );
 };
 
