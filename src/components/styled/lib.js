@@ -149,7 +149,9 @@ export const FilterSelect = styled.select`
 `;
 
 export const DetailWrapper = styled.div`
-  max-width: 650px;
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 900px;
   background-color: var(--gray-color);
   padding: 1em;
   border-radius: 1em;
@@ -171,9 +173,10 @@ export const DetailWrapper = styled.div`
     }
   }
   @media screen and (min-width: 768px) {
-    display:flex;
+    margin-top: 2em;
+    grid-template-columns: 30em 1fr;
     div {
-      text-align: center;
+      text-align: justify;
     }
     ul {
       margin-top: 2em;
