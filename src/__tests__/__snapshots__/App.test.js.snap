@@ -1,0 +1,255 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component renders correctly 1`] = `
+Array [
+  <nav
+    className="sc-bdfBwQ fOzUnA"
+  >
+    <nav>
+      <ul
+        className="sc-gsTCUz caxSvr"
+      >
+        <li>
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+             
+            <img
+              alt="nav logo"
+              src="MarvelLogo.svg"
+            />
+             
+          </a>
+        </li>
+        <li
+          className="sc-dlfnbm kwbObp"
+        >
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+             List 
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </nav>,
+  <main
+    className="sc-eCssSg bdavEI"
+  >
+    <div
+      className="sc-jSgupP cVZDpV"
+    >
+      <button
+        className="sc-hKgILt xorqq"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#f7ba43",
+          }
+        }
+        type="button"
+      >
+        <img
+          alt="iron man"
+          src="iron-man.png"
+        />
+      </button>
+      <button
+        className="sc-hKgILt xorqq"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "white",
+          }
+        }
+        type="button"
+      >
+        <img
+          alt="spider-man"
+          src="spider-man.png"
+        />
+      </button>
+      <button
+        className="sc-hKgILt xorqq"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "white",
+          }
+        }
+        type="button"
+      >
+        <img
+          alt="thor"
+          src="thor.png"
+        />
+      </button>
+      <button
+        className="sc-hKgILt xorqq"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "white",
+          }
+        }
+        type="button"
+      >
+        <img
+          alt="hulk"
+          src="hulk.png"
+        />
+      </button>
+      <button
+        className="sc-hKgILt xorqq"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "white",
+          }
+        }
+        type="button"
+      >
+        <img
+          alt="wolverine"
+          src="wolverine.png"
+        />
+      </button>
+      <button
+        className="sc-hKgILt xorqq"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "white",
+          }
+        }
+        type="button"
+      >
+        <img
+          alt="captain america"
+          src="captain-america.png"
+        />
+      </button>
+    </div>
+    <div
+      className="sc-fubCfw kleonc"
+    >
+      <b>
+        Filter by creator: 
+      </b>
+       
+      <select
+        className="sc-pFZIQ jEJBT"
+        onChange={[Function]}
+      >
+        <option
+          value="All"
+        >
+          All
+        </option>
+        <option
+          value="Federico Blee"
+        >
+          Federico Blee
+        </option>
+        <option
+          value="Sebastian Carrillo"
+        >
+          Sebastian Carrillo
+        </option>
+        <option
+          value="John Tyler Christopher"
+        >
+          John Tyler Christopher
+        </option>
+        <option
+          value="Christina Harrington"
+        >
+          Christina Harrington
+        </option>
+        <option
+          value="Vc Cory Petit"
+        >
+          Vc Cory Petit
+        </option>
+        <option
+          value="Mariko Tamaki"
+        >
+          Mariko Tamaki
+        </option>
+        <option
+          value="Tom Brevoort"
+        >
+          Tom Brevoort
+        </option>
+        <option
+          value="C Cafu"
+        >
+          C Cafu
+        </option>
+        <option
+          value="Christopher Cantwell"
+        >
+          Christopher Cantwell
+        </option>
+        <option
+          value="Vc Joe Caramagna"
+        >
+          Vc Joe Caramagna
+        </option>
+        <option
+          value="Frank D'ARMATA"
+        >
+          Frank D'ARMATA
+        </option>
+        <option
+          value="Alex Ross"
+        >
+          Alex Ross
+        </option>
+        <option
+          value="Henry Abrams"
+        >
+          Henry Abrams
+        </option>
+        <option
+          value="J.J Abrams"
+        >
+          J.J Abrams
+        </option>
+        <option
+          value="Olivier Coipel"
+        >
+          Olivier Coipel
+        </option>
+        <option
+          value="Nick Lowe"
+        >
+          Nick Lowe
+        </option>
+        <option
+          value="Sara Pichelli"
+        >
+          Sara Pichelli
+        </option>
+        <option
+          value="Dave Stewart"
+        >
+          Dave Stewart
+        </option>
+      </select>
+    </div>
+    <ion-spinner
+      name="bubbles"
+      style={
+        Object {
+          "color": "red",
+          "margin": "auto",
+          "transform": "scale(5)",
+        }
+      }
+    />
+  </main>,
+]
+`;

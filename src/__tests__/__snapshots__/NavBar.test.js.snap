@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar renders correctly 1`] = `
+<nav
+  className="sc-bdfBwQ fOzUnA"
+>
+  <nav>
+    <ul
+      className="sc-gsTCUz caxSvr"
+    >
+      <li>
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+           
+          <img
+            alt="nav logo"
+            src="MarvelLogo.svg"
+          />
+           
+        </a>
+      </li>
+      <li
+        className="sc-dlfnbm kwbObp"
+      >
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+           List 
+        </a>
+      </li>
+    </ul>
+  </nav>
+</nav>
+`;
