@@ -1,7 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Loading renders correctly 1`] = `
-<h1>
-  Loading...
-</h1>
+<ion-spinner
+  name="bubbles"
+  style={
+    Object {
+      "color": "red",
+      "margin": "auto",
+      "transform": "scale(5)",
+    }
+  }
+/>
 `;

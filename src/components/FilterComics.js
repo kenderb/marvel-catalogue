@@ -21,12 +21,13 @@ const FilterComics = ({ currentFilter, cretorList, onChangeSelect }) => (
 FilterComics.propTypes = {
   cretorList: PropTypes.instanceOf(Array),
   onChangeSelect: PropTypes.func,
-  currentFilter: PropTypes.string.isRequired,
+  currentFilter: PropTypes.string,
 };
 
 FilterComics.defaultProps = {
   cretorList: [],
   onChangeSelect: () => (''),
+  currentFilter: '',
 };
 
 export default FilterComics;

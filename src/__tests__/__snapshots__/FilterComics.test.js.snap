@@ -1,22 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FilterComics renders correctly 1`] = `
-<div
-  className="sc-fubCfw kleonc"
->
-  <b>
-    Filter by creator: 
-  </b>
-   
-  <select
-    className="sc-pFZIQ jEJBT"
-    onChange={[Function]}
+Array [
+  <div
+    className="sc-fubCfw kleonc"
   >
-    <option
-      value="All"
+    <b>
+      Filter by creator: 
+    </b>
+     
+    <select
+      className="sc-pFZIQ jEJBT"
+      onChange={[Function]}
     >
-      All
-    </option>
-  </select>
-</div>
+      <option
+        value="All"
+      >
+        All
+      </option>
+    </select>
+  </div>,
+  <ion-spinner
+    name="bubbles"
+    style={
+      Object {
+        "color": "red",
+        "margin": "auto",
+        "transform": "scale(5)",
+      }
+    }
+  />,
+]
 `;
