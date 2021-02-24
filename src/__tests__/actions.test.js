@@ -16,10 +16,6 @@ describe('Action Types for Comics', () => {
     const action = fetchComicsError();
     expect(action.type).toStrictEqual('ERROR_COMICS');
   });
-  it('fetchComicsError return the right action payload', () => {
-    const action = fetchComicsError();
-    expect(action.type).toStrictEqual('ERROR_COMICS');
-  });
   it('filterByCreatorSuccess return the right action payload', () => {
     const action = filterByCreatorSuccess('comic one');
     expect(action.type).toStrictEqual('FILTER_COMICS');
