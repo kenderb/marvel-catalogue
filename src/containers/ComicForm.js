@@ -7,7 +7,7 @@ import HeroSelector from '../components/HeroSelector';
 import { characters, listOfCreators } from '../common';
 import { HeroWrapper } from '../components/styled/lib';
 
-const ComicForm = ({ fetchComics, filterByCreator }) => {
+const ComicForm = ({ filter, fetchComics, filterByCreator }) => {
   const [currentSelect, setCurrentSelect] = useState('iron man');
   const handleOnChnage = name => {
     fetchComics(name);
@@ -33,6 +33,7 @@ const ComicForm = ({ fetchComics, filterByCreator }) => {
       <FilterComics
         cretorList={listOfCreators}
         onChangeSelect={handleOnChnageSelect}
+        currentFilter={filter}
       />
     </>
   );
@@ -41,7 +42,11 @@ const ComicForm = ({ fetchComics, filterByCreator }) => {
 ComicForm.propTypes = {
   fetchComics: PropTypes.func.isRequired,
   filterByCreator: PropTypes.func.isRequired,
-
+  filter: PropTypes.string.isRequired,
 };
 
-export default connect(null, { fetchComics, filterByCreator })(ComicForm);
+const mapStateToProps = state => ({
+  filter: state.filter,
+});
+
+export default connect(mapStateToProps, { fetchComics, filterByCreator })(ComicForm);

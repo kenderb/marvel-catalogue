@@ -51,7 +51,6 @@ const mapStateToProps = state => ({
   loading: state.comics.loading,
   comics: state.comics.data,
   error: state.comics.error,
-  filter: state.filter,
 });
 
 export default connect(mapStateToProps, { fetchComics, filterByCreator })(CharacterList);
